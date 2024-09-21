@@ -4,6 +4,7 @@ class OddSum {
     public static void main(String[] args)
     {
         Scanner obj = new Scanner(System.in);
+        System.out.println("Enter size of an array: ")
         int size = obj.nextInt();
 
         int oddSum = 0 , i = 0;

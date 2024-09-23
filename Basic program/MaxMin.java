@@ -18,7 +18,5 @@ class MaxMin
         }
         System.out.println("Max : "+max);
         System.out.println("Min : "+min);
-        // System.out.println("Max : "+Integer.MAX_VALUE);
-        // System.out.println("Min : "+Integer.MIN_VALUE);
     }
 }

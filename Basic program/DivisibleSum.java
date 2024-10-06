@@ -9,6 +9,7 @@ class DivisibleSum {
 
         int[] divisible = new int[size];
 
+        System.out.println("Enter the elements of an array : ");
         for(int i = 0; i<divisible.length;i++){
             divisible[i] = input.nextInt();
         }

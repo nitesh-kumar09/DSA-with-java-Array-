@@ -30,29 +30,28 @@ class CheckEqual
             arrTwo[i] = input.nextInt();
           
         }
+
+        // Logic
         boolean isResult = true;
-        int i=0 , j =0;
+        int i=0;
 
         if(arrOne.length ==  arrTwo.length)
         {
             while(i<arrOne.length)
             {
-               while(j<arrTwo.length)
-               {
-                    
-                        if(arrOne[i] !=  arrTwo[j])
+                        if(arrOne[i] !=  arrTwo[i])
                         {
                            isResult = false;
                         }
-                    j++;
-                    i++;
-    
-               }
+                    i++;     
             }
         }
     else{
         isResult = false;
     }
+
+
+
        if(isResult == true)
             System.out.println("All Element are equal..");
         else

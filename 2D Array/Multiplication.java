@@ -1,5 +1,7 @@
+ 
+
 import java.util.*;
- class AdditionTwoMatrix {
+ class Multiplication {
     
     public static void main(String[] args)
     {
@@ -16,11 +18,11 @@ import java.util.*;
         
 
        
-        if(rA == rB &&  cA == cB)
+        if(cA == rB)
         {
             int i,j, arrOne[][] = new int[rA][cA];
             int arrTwo[][] = new int[rB][cB];
-            int arrThree[][] = new int[rB][cB];
+            int arrThree[][] = new int[cA][rB];
 
         System.out.println("Enter Element of matrix A one by one : ");
         for(i = 0 ; i < rA ; i++)
@@ -38,16 +40,24 @@ import java.util.*;
                 arrTwo[i][j] = obj.nextInt();
             }
         }
-        // addition logic
-        for(i = 0 ; i < rA ; i++)
-        {
-            for(j = 0 ; j < cA ; j++)
+        
+        // Mulitplication logic
+           
+            for(i = 0 ; i < cA ; i++)
             {
-                arrThree[i][j] = arrOne[i][j] + arrTwo[i][j];
+                int k = 0;
+               for(j = 0 ;j <cA ; j++)
+               {
+                
+                arrThree[i][j] = 0 ;
+                for( k = 0 ; k < cA ; k++)
+                {
+                    arrThree[i][j] = arrThree[i][j] + arrOne[i][k] * arrTwo[k][j];
+                }
+               }
             }
-        }
-        System.out.println("Matrix elements are : ");
-        // Display all the matrix
+        
+
         for(i = 0 ; i < rA ; i++)
         {
             for(j = 0 ; j < cA ; j++)
@@ -77,8 +87,10 @@ import java.util.*;
         System.out.println();
         }
         else
-            System.out.println("Matrix addition is not possible..");
+            System.out.println("Matrix Multiplication is not possible..");
        
         
     }
 }
+
+

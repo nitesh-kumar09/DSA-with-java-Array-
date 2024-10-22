@@ -1,5 +1,5 @@
 import java.util.*;
- class AdditionTwoMatrix {
+ class SubstractionTwoMatrix {
     
     public static void main(String[] args)
     {
@@ -38,12 +38,12 @@ import java.util.*;
                 arrTwo[i][j] = obj.nextInt();
             }
         }
-        // addition logic
+        // Substraction logic
         for(i = 0 ; i < rA ; i++)
         {
             for(j = 0 ; j < cA ; j++)
             {
-                arrThree[i][j] = arrOne[i][j] + arrTwo[i][j];
+                arrThree[i][j] = arrOne[i][j] - arrTwo[i][j];
             }
         }
         System.out.println("Matrix elements are : ");
